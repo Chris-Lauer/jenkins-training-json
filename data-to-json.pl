@@ -21,4 +21,4 @@ foreach my $line (@lines){
 
 my $json_str = encode_json(\@p1);
 open(my $output, '>output.json');
-print $output "$json_str";
+print $output "[[$json_str";
