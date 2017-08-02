@@ -1,7 +1,8 @@
 FROM centos:centos6
 
 RUN yum -y update && \
-    yum -y install wget nano openssh-server openssh-clients && \    
+    yum -y install wget nano openssh-server openssh-clients && \   
+    yum -y install perl-Test-Harness perl-Test-Simple perl-Test-Exception perl-JSON && \
     \
     chkconfig sshd on && service sshd start && \
     \ 
