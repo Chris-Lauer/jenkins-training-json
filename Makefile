@@ -10,6 +10,8 @@
 all:
 	perl -MTest::Harness -e '$$Test::Harness::verbose=0; runtests @ARGV;' tests/*.t
 build:
+	perl data-to-json.pl
+test:
 	perl -MTest::Harness -e '$$Test::Harness::verbose=1; runtests @ARGV;' tests/*.t
 clean:
 	find . -name '*~' -exec rm -f \{\} \;
