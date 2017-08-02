@@ -9,7 +9,7 @@
 #
 all:
 	perl -MTest::Harness -e '$$Test::Harness::verbose=0; runtests @ARGV;' tests/*.t
-verbose:
+build:
 	perl -MTest::Harness -e '$$Test::Harness::verbose=1; runtests @ARGV;' tests/*.t
 clean:
 	find . -name '*~' -exec rm -f \{\} \;
