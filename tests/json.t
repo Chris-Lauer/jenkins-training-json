@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 use Test::More tests => 2;
 use Test::Exception;
+use JSON;
 
 #unlink('output.json');
 
