@@ -1,8 +1,9 @@
 #!/usr/bin/perl -w
 #sample-data
+use strict;
 use JSON;
 
-open(my $fh, "sample-data");
+open(my $fh, '<', 'sample-data');
 @lines = <$fh>;
 close($fh);
 my @p1;
@@ -20,5 +21,5 @@ foreach my $line (@lines){
 }
 
 my $json_str = encode_json(\@p1);
-open(my $output, '>output.json');
+open(my $output, q{>}, 'output.json');
 print $output "$json_str";

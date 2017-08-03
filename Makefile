@@ -15,3 +15,5 @@ test:
 	perl -MTest::Harness -e '$$Test::Harness::verbose=1; runtests @ARGV;' tests/*.t
 clean:
 	find . -name '*~' -exec rm -f \{\} \;
+check:
+	perlcritic data-to-json.pl
