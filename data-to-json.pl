@@ -4,7 +4,7 @@ use strict;
 use JSON;
 
 open(my $fh, '<', 'sample-data');
-@lines = <$fh>;
+my @lines = <$fh>;
 close($fh);
 my @p1;
 #my @p1,@p5,@p10,@p30,@p50,@p100,@ep8,@e2,@e4;
