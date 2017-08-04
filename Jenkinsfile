@@ -9,7 +9,7 @@ node('centos6') {
         sh 'make check'  
     }
     stage('test'){
-        unarchiveArtifacts 'output.json'
+        unarchiveArtifacts ['output.json':'output.json']
         sh 'make test'
     }
 }
