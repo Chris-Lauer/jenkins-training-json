@@ -1,5 +1,4 @@
 #!/usr/bin/perl -w
-#sample-data
 use strict;
 use warnings;
 use JSON;
