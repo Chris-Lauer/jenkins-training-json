@@ -4,6 +4,7 @@ node('centos6') {
     stage('build') {
         sh 'make build'
         archiveArtifacts 'output.json'
+        echo 'Build done'
     }
     stage('check') {
         sh 'make check'
