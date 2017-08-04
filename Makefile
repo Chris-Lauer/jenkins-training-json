@@ -12,6 +12,8 @@ all:
 build:
 	perl data-to-json.pl
 	cat VERSION
+build-props-lauer:
+	./build_props_lauer.sh
 test:
 	perl -MTest::Harness -e '$$Test::Harness::verbose=1; runtests @ARGV;' tests/*.t
 clean:

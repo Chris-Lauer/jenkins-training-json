@@ -6,6 +6,10 @@ node('centos6') {
         archiveArtifacts 'output.json'           
         sh 'rm output.json'
     }
+    stage('build properties') {
+        sh 'make build-props-lauer'
+        archiveArtifacts 'build.properties'
+    } 
     stage('check'){
         sh 'make check'  
     }
