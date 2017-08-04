@@ -6,6 +6,12 @@ node('centos6') {
         archiveArtifacts 'output.json'
         echo 'Build done'
     }
+    stage('Print Env') {
+        sh 'env'
+    }
+    stage('Build Properties') {
+        st 'make build-props-lauer'
+    }
     stage('check') {
         sh 'make check'
     }    
